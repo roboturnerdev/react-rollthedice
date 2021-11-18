@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Die from './Die';
+import './RollDice.css';
 
 class RollDice extends Component {
 
@@ -27,9 +28,11 @@ class RollDice extends Component {
     // any time the state is set in these functions, they send a render()
     render() {
         return (
-        <div>
-            <Die face={this.state.d1}/>
-            <Die face={this.state.d2}/>
+        <div className="RollDice">
+            <div className="RollDice--container">
+                <Die face={this.state.d1}/>
+                <Die face={this.state.d2}/>
+            </div>
             <button onClick={this.roll}>Roll The Bones</button>
         </div>
         )
